@@ -4,26 +4,35 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --hot",
-    "build": "sudo node_modules/.bin/webpack"
+    "server": "webpack-dev-server --hot && npm run build ",
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.0.0-beta.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
+    "json-loader": "^0.5.7",
     "less": "^3.11.3",
     "less-loader": "^6.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "raw-loader": "^4.0.1",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "yaml-frontmatter-loader": "^0.1.0"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-loader": "^3.0.0",
     "stylus-loader": "^3.0.2"
   }
 }
